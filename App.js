@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     padding: 20,
+    margin: 'auto',
   },
   login:{
     flex: 1,
