@@ -4,20 +4,22 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.login}>
-        <Text style={styles.titulo}>Iniciar Sesión</Text>
-        <TextInput style={styles.textInput} placeholder='Correo Electrónico' />
-        <TextInput style={styles.textInput} placeholder='Contraseña'/>
-        <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>Entrar</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.singUp}>
-        <Text style={styles.subtitle}>¿Aún no tienes una cuenta?</Text>
-        <Text style={styles.text}>Regístrate para que puedas iniciar sesión</Text>
-        <TouchableOpacity style={styles.singButton}>
-          <Text style={styles.singButtonText}>Regístrarse</Text>
-        </TouchableOpacity>
+      <View style={styles.box}>
+        <View style={styles.login}>
+          <Text style={styles.titulo}>Iniciar Sesión</Text>
+          <TextInput style={styles.textInput} placeholder='Correo Electrónico' />
+          <TextInput style={styles.textInput} placeholder='Contraseña'/>
+          <TouchableOpacity style={styles.loginButton}>
+            <Text style={styles.loginButtonText}>Entrar</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.singUp}>
+          <Text style={styles.subtitle}>¿Aún no tienes una cuenta?</Text>
+          <Text style={styles.text}>Regístrate para que puedas iniciar sesión</Text>
+          <TouchableOpacity style={styles.singButton}>
+            <Text style={styles.singButtonText}>Regístrarse</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -27,10 +29,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  box:{
+    flex: 1,
     flexDirection: 'row',//Permite que los contenedores estén alineados.
-    backgroundColor: '#fff',
     alignItems: 'center',
-    padding: 20,
     margin: 'auto',
   },
   login:{
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 9,
     borderLeftColor: '#FF1111',
     padding: 10,
+
   },
   singUp:{
     flex: 1,
